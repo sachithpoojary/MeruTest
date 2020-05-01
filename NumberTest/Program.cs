@@ -29,7 +29,9 @@ namespace NumberTest
             listSum = listSum.OrderByDescending(x => x).ToList();
             //get the corresponding series of int from the dictionary
             var myKey = dictionary.FirstOrDefault(x => x.Value == listSum[0]).Key;
-            Console.WriteLine($"Series with highest SUM : { string.Join(",", myKey)} = {listSum[0]}");
+            Console.WriteLine($"\nSeries with highest SUM : { string.Join(",", myKey)} = {listSum[0]}");
+
+            Console.ReadKey();
         }
 
         public static List<List<int>> SplitList(List<int> list, int size)
