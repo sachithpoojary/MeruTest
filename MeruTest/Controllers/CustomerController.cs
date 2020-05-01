@@ -1,5 +1,4 @@
 ﻿using MeruTest.Models;
-using MeruTest.ResponseModel;
 using MeruTest.ResponseModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
