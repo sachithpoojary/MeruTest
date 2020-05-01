@@ -34,8 +34,10 @@ namespace MeruTest.Controllers
                                where cus.CustMobNo == custMob
                                select new ResponseModel(s.SubAreaName, a.AreaName, c.CityName, cus.CustName, cus.Address))
                                .FirstOrDefault();
-
-                return response;
+                if (response == null)
+                    return NotFound();
+                else
+                    return response;
             }
             catch (Exception ex)
             {
