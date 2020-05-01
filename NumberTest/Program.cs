@@ -26,7 +26,7 @@ namespace NumberTest
                 dictionary.Add(splitArray[i], listSum[i]);
             }
             //sorted the list of sum
-            listSum.Sort();
+            listSum = listSum.OrderByDescending(x => x).ToList();
             //get the corresponding series of int from the dictionary
             var myKey = dictionary.FirstOrDefault(x => x.Value == listSum[0]).Key;
             Console.WriteLine($"Series with highest SUM : { string.Join(",", myKey)} = {listSum[0]}");
